@@ -5,26 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>MiniMercado Central</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
   <script src="script.js" defer></script>
-  <style>
-    .carousel-control-prev-icon,
-    .carousel-control-next-icon {
-      filter: invert(1); /* torna a seta preta */
-    }
-
-    .carousel-item img {
-      width: 100%;
-      height: auto;
-      max-height: 400px;
-      object-fit: cover;
-    }
-
-    .carousel-item p {
-      margin-top: 10px;
-      font-weight: 600;
-      font-size: 1.2rem;
-    }
-  </style>
 </head>
 <body>
   <header class="bg-primary text-white text-center p-3">
@@ -37,32 +19,33 @@
     </nav>
   </header>
 
-  <div id="carouselExampleIndicators" class="carousel slide mt-4" data-bs-ride="carousel">
-    <div class="carousel-inner text-center">
-      <div class="carousel-item active">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/a/af/Bananas_%28Alabama_Extension%29.jpg" alt="Banana em promoção" class="mx-auto d-block" />
-        <p>Banana</p>
+  <main class="container carousel-container text-center">
+    <div id="carouselExampleIndicators" class="carousel slide mt-4" data-bs-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/a/af/Bananas_%28Alabama_Extension%29.jpg" alt="Banana em promoção" class="mx-auto d-block" />
+          <p>Banana</p>
+        </div>
+        <div class="carousel-item">
+          <img src="https://organicosinbox.com.br/wp-content/uploads/2020/11/alface-crespa-organica.jpg" alt="Alface fresca" class="mx-auto d-block" />
+          <p>Alface</p>
+        </div>
+        <div class="carousel-item">
+          <img src="https://comidaboa.delivery/wp-content/uploads/2022/06/Arroz-branco-1s.jpg" alt="Pacotes de arroz em promoção" class="mx-auto d-block" />
+          <p>Arroz 5kg</p>
+        </div>
       </div>
-      <div class="carousel-item">
-        <img src="https://organicosinbox.com.br/wp-content/uploads/2020/11/alface-crespa-organica.jpg" alt="Alface fresca" class="mx-auto d-block" />
-        <p>Alface</p>
-      </div>
-      <div class="carousel-item">
-        <img src="https://comidaboa.delivery/wp-content/uploads/2022/06/Arroz-branco-1s.jpg" alt="Pacotes de arroz em promoção" class="mx-auto d-block" />
-        <p>Arroz 5kg</p>
-      </div>
-    </div>
 
-    <!-- Botões de navegação -->
-    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Anterior</span>
-    </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Próximo</span>
-    </button>
-  </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Anterior</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Próximo</span>
+      </button>
+    </div>
+  </main>
 
   <footer class="bg-light text-center p-3 mt-5">
     <p>&copy; 2025 MiniMercado Central</p>
