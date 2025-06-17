@@ -1,24 +1,52 @@
+/* Estilo geral */
 body {
   background-color: #f5f5f5;
 }
 
+/* Imagens de produtos em cards */
 .card-img-top {
   height: 200px;
   object-fit: cover;
 }
 
+/* Imagens genéricas de produto */
 .produto-imagem {
   width: 544px;
   height: 200px;
-  object-fit: cover; /* mantém proporção cortando excesso */
+  object-fit: cover;
   display: block;
   margin: 0 auto;
 }
 
+/* Container do carrossel com borda e centralização */
+.carousel-container {
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  padding: 20px;
+  background-color: #fff;
+  margin: 40px auto;
+  max-width: 600px;
+}
+
+/* Imagens do carrossel */
 .carousel-item img {
   width: 544px;
   height: 200px;
   object-fit: cover;
+  display: block;
   margin: 0 auto;
 }
 
+/* Texto abaixo das imagens do carrossel */
+.carousel-item p {
+  margin-top: 10px;
+  font-weight: 600;
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+/* Setas do carrossel em preto (visíveis em fundo branco) */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  filter: invert(1);
+}
