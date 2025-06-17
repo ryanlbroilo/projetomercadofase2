@@ -66,37 +66,44 @@
     <p>&copy; 2025 MiniMercado Central</p>
   </footer>
 
-  <script>
-        // Validar inputs padrão
-        if (!form.checkValidity()) {
-          mensagem.textContent = "Por favor, preencha todos os campos obrigatórios corretamente.";
-          mensagem.style.color = "red";
-          return;
-        }
+ <script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const form = document.getElementById('formCadastro');
+    const mensagem = document.getElementById('mensagemConfirmacao');
 
-        // Validar radio 'sexo'
-        const sexoSelecionado = form.querySelector('input[name="sexo"]:checked');
-        if (!sexoSelecionado) {
-          mensagem.textContent = "Por favor, selecione o sexo.";
-          mensagem.style.color = "red";
-          return;
-        }
+    form.addEventListener('submit', function (event) {
+      event.preventDefault(); // evita envio do form e reload da página
 
-        // Validar radio 'entrega'
-        const entregaSelecionada = form.querySelector('input[name="entrega"]:checked');
-        if (!entregaSelecionada) {
-          mensagem.textContent = "Por favor, selecione a forma de entrega.";
-          mensagem.style.color = "red";
-          return;
-        }
+      // Validar inputs padrão
+      if (!form.checkValidity()) {
+        mensagem.textContent = "Por favor, preencha todos os campos obrigatórios corretamente.";
+        mensagem.style.color = "red";
+        return;
+      }
 
-        // Se chegou aqui, tudo válido!
-        mensagem.textContent = "Cadastro realizado com sucesso!";
-        mensagem.style.color = "green";
+      // Validar radio 'sexo'
+      const sexoSelecionado = form.querySelector('input[name="sexo"]:checked');
+      if (!sexoSelecionado) {
+        mensagem.textContent = "Por favor, selecione o sexo.";
+        mensagem.style.color = "red";
+        return;
+      }
 
-        form.reset();
-      });
+      // Validar radio 'entrega'
+      const entregaSelecionada = form.querySelector('input[name="entrega"]:checked');
+      if (!entregaSelecionada) {
+        mensagem.textContent = "Por favor, selecione a forma de entrega.";
+        mensagem.style.color = "red";
+        return;
+      }
+
+      // Tudo válido!
+      mensagem.textContent = "Cadastro realizado com sucesso!";
+      mensagem.style.color = "green";
+
+      form.reset();
     });
-  </script>
+  });
+</script>
 </body>
 </html>
