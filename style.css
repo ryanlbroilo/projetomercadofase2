@@ -15,11 +15,10 @@ body {
   margin: 0 auto;
 }
 
-/* Estilo para as imagens do carrossel, limita largura e mantém proporção */
-.carousel-inner img {
-  max-width: 70px;
-  height: auto;
-  object-fit: contain; /* para caber sem cortar */
+.carousel-item img {
+  width: 544px;
+  height: 200px;
+  object-fit: cover;
   margin: 0 auto;
-  display: block;
 }
+
